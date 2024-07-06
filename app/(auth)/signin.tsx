@@ -19,7 +19,7 @@ export default function SignIn() {
   const handleSignIn = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.replace("/"); // Navigate to the home screen after successful sign-in
+      router.replace("/");
     } catch (error: any) {
       Alert.alert("Error", error.message);
     }

@@ -19,7 +19,7 @@ export default function SignUp() {
   const handleSignUp = async () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      router.replace("/"); // Navigate to the home screen after successful sign-up
+      router.replace("/");
     } catch (error: any) {
       Alert.alert("Error", error.message);
     }

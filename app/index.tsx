@@ -48,6 +48,12 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome, {user.email || "User"}!</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.push("/gameFeed")}
+      >
+        <Text style={styles.buttonText}>Go to Game Feed</Text>
+      </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={handleSignOut}>
         <Text style={styles.buttonText}>Sign Out</Text>
       </TouchableOpacity>
